@@ -1,0 +1,53 @@
+cd 1111_os
+ls
+
+
+cd os_1
+cd temp1
+ls
+
+
+gcc add.c
+./a.out
+
+
+vi sub.c
+
+
+gcc sub.c
+./a.out
+
+
+vi mul.c
+
+
+gcc mul.c
+./a.out
+
+
+vi oddeve.c
+
+
+gcc oddeve.c
+./a.out
+
+
+vi switch.c
+
+
+gcc switch.c
+./a.out
+
+
+vi for.c
+
+
+gcc for.c
+./a.out
+
+
+vi hello.c
+
+
+gcc hello.c
+./a.out
