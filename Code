@@ -1,0 +1,58 @@
+mkdir 1111_os
+cd 1111_os
+
+
+mkdir os_1
+cd os_1
+
+
+mkdir temp1
+ls
+
+
+cd temp1
+mkdir temp2
+cd temp2
+
+
+pwd
+
+
+cd ..
+
+
+cd ..
+
+
+pwd
+
+
+cd temp1
+cd temp2
+
+
+vi temp2.txt
+
+
+vi tempsum.c
+
+
+cd ..
+
+
+vi temp1sub.c
+
+
+cd ..
+
+
+ls
+
+
+cd ..
+
+
+cd ..
+
+
+ls --version
