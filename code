@@ -1,0 +1,103 @@
+#!/bin/bash
+
+echo "--- 1. Hello World ---"
+echo "Hello World"
+echo ""
+
+echo "--- 2. Print and Read Value ---"
+echo "Enter a value:"
+read val
+echo "The value you entered is: $val"
+echo ""
+
+echo "--- 3. Name and Age ---"
+echo "Enter your name:"
+read name
+echo "Enter your age:"
+read age
+echo "Hello $name, you are $age years old."
+echo ""
+
+echo "--- 4. Largest of 2 Numbers ---"
+echo "Enter two numbers (e.g., 10 20):"
+read a b
+if [ $a -gt $b ]; then
+    echo "$a is larger"
+else
+    echo "$b is larger"
+fi
+echo ""
+
+echo "--- 5. Largest of 3 Numbers ---"
+echo "Enter three numbers:"
+read x y z
+if [ $x -gt $y ] && [ $x -gt $z ]; then
+    echo "$x is the largest"
+elif [ $y -gt $x ] && [ $y -gt $z ]; then
+    echo "$y is the largest"
+else
+    echo "$z is the largest"
+fi
+echo ""
+
+echo "--- 6. Country Check ---"
+echo "Enter country name (India/Nepal/Other):"
+read country
+if [ "$country" == "India" ]; then
+    echo "India is the country."
+elif [ "$country" == "Nepal" ]; then
+    echo "Nepal is the country."
+else
+    echo "Other country."
+fi
+echo ""
+
+echo "--- 7-10. Arithmetic Operations ---"
+echo "Enter two numbers for math:"
+read n1 n2
+echo "Addition: $((n1 + n2))"
+echo "Subtraction: $((n1 - n2))"
+echo "Multiplication: $((n1 * n2))"
+if [ $n2 -ne 0 ]; then
+    # Using 'bc' for decimal division if installed, else integer division
+    echo "Division: $((n1 / n2))"
+else
+    echo "Division: Cannot divide by zero"
+fi
+echo ""
+
+echo "--- 11. Even or Odd ---"
+echo "Enter a number:"
+read num
+if [ $((num % 2)) -eq 0 ]; then
+    echo "$num is Even"
+else
+    echo "$num is Odd"
+fi
+echo ""
+
+echo "--- 12. Leap Year ---"
+echo "Enter a year:"
+read yr
+if [ $((yr % 400)) -eq 0 ] || ([ $((yr % 4)) -eq 0 ] && [ $((yr % 100)) -ne 0 ]); then
+    echo "$yr is a Leap Year"
+else
+    echo "$yr is not a Leap Year"
+fi
+echo ""
+
+echo "--- 13. Grade System ---"
+echo "Enter your marks:"
+read marks
+if [ $marks -ge 75 ]; then
+    echo "Result: Distinction"
+elif [ $marks -ge 65 ]; then
+    echo "Result: 1st Division"
+elif [ $marks -ge 55 ]; then
+    echo "Result: 2nd Division"
+else
+    echo "Result: Fail"
+fi
+echo ""
+
+echo "Practical Session Complete!"
